@@ -46,6 +46,8 @@ export const metadata: Metadata = {
   },
 };
 
+import FloatingWhatsApp from "../components/FloatingWhatsApp";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -58,6 +60,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <CookieConsent />
+        <FloatingWhatsApp />
       </body>
     </html>
   );

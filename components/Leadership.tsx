@@ -69,25 +69,40 @@ export const Leadership: React.FC = () => {
               </div>
 
               {/* Bottom Card Footer */}
-              <div className="px-6 sm:px-8 pb-6 pt-3 border-t border-[#F0EAE3] flex items-center justify-between text-xs text-[#7A6F6B]">
-                {member.linkedin ? (
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#0A66C2] hover:text-[#004182] inline-flex items-center gap-1.5 font-medium transition-colors"
-                  >
-                    <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                    </svg>
-                    <span>LinkedIn Profile</span>
-                    <ArrowUpRight className="w-3 h-3" />
-                  </a>
-                ) : (
-                  <span className="font-mono text-[11px] truncate">
-                    {member.role}
-                  </span>
-                )}
+              <div className="px-6 sm:px-8 pb-6 pt-3 border-t border-[#F0EAE3] flex flex-wrap items-center justify-between gap-3 text-xs text-[#7A6F6B]">
+                <div className="flex items-center gap-3">
+                  {member.whatsappUrl && (
+                    <a
+                      href={member.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#25D366] hover:text-[#1EBE5D] inline-flex items-center gap-1.5 font-medium transition-colors"
+                    >
+                      <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.274.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z" />
+                      </svg>
+                      <span>WhatsApp</span>
+                    </a>
+                  )}
+                  {member.linkedin && (
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#0A66C2] hover:text-[#004182] inline-flex items-center gap-1.5 font-medium transition-colors"
+                    >
+                      <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                      </svg>
+                      <span>LinkedIn</span>
+                    </a>
+                  )}
+                  {!member.linkedin && !member.whatsappUrl && (
+                    <span className="font-mono text-[11px] truncate">
+                      {member.role}
+                    </span>
+                  )}
+                </div>
                 <Link
                   href="/contact"
                   className="text-[#2B211E] hover:text-[#B87333] inline-flex items-center gap-1 font-medium transition-colors ml-auto"
