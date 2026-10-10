@@ -5,6 +5,7 @@ export interface PrincipalContact {
   category: string;
   bio: string;
   image: string;
+  linkedin?: string;
 }
 
 export const companyInformation = {
@@ -12,38 +13,44 @@ export const companyInformation = {
   shortName: "ENTRABALANCE GLOBAL",
   brandMark: "EG",
   llpin: "ACF-4900",
-  incorporationDate: "February 12, 2024",
-  incorporationYear: "2024",
+  incorporationDate: "2019",
+  incorporationYear: "2019",
+  experienceYears: "5+ Years",
+  clientsServed: "100+ Satisfied Clients",
+  satisfactionRate: "100%",
   entityType: "Limited Liability Partnership (LLP)",
+  linkedinUrl: "https://www.linkedin.com/in/yogeshwar-kale-b7b61a1ba?utm_source=share_via&utm_content=profile&utm_medium=member_android",
   principalContacts: [
     {
       name: "Yogeshwar Kale",
-      role: "Principal Contact"
+      role: "Managing Director & Co-Founder",
+      linkedin: "https://www.linkedin.com/in/yogeshwar-kale-b7b61a1ba?utm_source=share_via&utm_content=profile&utm_medium=member_android"
     },
     {
       name: "Shubham Agarwal",
-      role: "Principal Contact"
+      role: "Co-Founder & Principal Partner"
     }
   ],
   tagline: "Accounting Operations. Financial Accuracy. Better Business Processes.",
-  positioning: "Supporting businesses with accounting operations, transaction processing, financial reporting, payroll support, audit support, reconciliations, and process improvement."
+  positioning: "Supporting businesses across US, UK & India with 5+ years of trusted accounting operations, transaction processing, financial reporting, and process improvement."
 };
 
 export const leadershipData: PrincipalContact[] = [
   {
     id: "contact-1",
     name: "Yogeshwar Kale",
-    role: "Principal Contact",
+    role: "Managing Director & Co-Founder",
     category: "Designated Leadership",
-    bio: "Principal contact at ENTRABALANCE GLOBAL LLP, coordinating client engagements across accounting operations, financial controls, and specialist accounting workflows.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
+    bio: "Managing Director & Founder with 5+ years of demonstrated excellence leading accounting, taxation, and financial operations across the US, UK, and India, delivering a 100% client satisfaction track record across 100+ satisfied corporate clients.",
+    image: "/yogeshwar-kale.jpg",
+    linkedin: "https://www.linkedin.com/in/yogeshwar-kale-b7b61a1ba?utm_source=share_via&utm_content=profile&utm_medium=member_android"
   },
   {
     id: "contact-2",
     name: "Shubham Agarwal",
-    role: "Principal Contact",
+    role: "Co-Founder & Principal Partner",
     category: "Designated Leadership",
-    bio: "Principal contact at ENTRABALANCE GLOBAL LLP, supporting client mandates across transaction processing, period-end reviews, and accounting process improvement.",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=800"
+    bio: "Co-Founder and principal partner supporting client mandates across transaction processing, accounting controls, period-end financial tie-outs, and disciplined workflow improvements.",
+    image: ""
   }
 ];

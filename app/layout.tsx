@@ -1,16 +1,23 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import CookieConsent from "../components/CookieConsent";
 import { companyInformation } from "../data/team";
 
-const inter = Inter({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-primary",
+  variable: "--font-serif",
   display: "swap",
 });
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: `${companyInformation.legalName} | Accounting Operations & Financial Control`,
@@ -45,8 +52,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="min-h-screen flex flex-col bg-white text-[#111111] antialiased selection:bg-[#111111] selection:text-white">
+    <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
+      <body className="min-h-screen flex flex-col font-sans antialiased text-[#1A1412] selection:bg-[#B87333] selection:text-white">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

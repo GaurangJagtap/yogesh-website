@@ -47,35 +47,60 @@ export default function TeamPage() {
             >
               <div>
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center mb-8 pb-6 border-b border-[#F0F0EE]">
-                  {/* Portrait */}
-                  <div className="sm:col-span-5 relative aspect-[4/5] bg-[#EAEAEA] overflow-hidden">
-                    <Image
-                      src={member.image}
-                      alt={`${member.name} - ${member.role} at ${companyInformation.legalName}`}
-                      fill
-                      className="object-cover grayscale hover:grayscale-0 transition-all duration-300"
-                      sizes="(max-width: 640px) 100vw, 200px"
-                    />
+                  {/* Portrait or Monogram */}
+                  <div className="sm:col-span-5 relative aspect-[4/5] bg-[#FAF7F2] border border-[#E8E0D8] overflow-hidden flex items-center justify-center">
+                    {member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={`${member.name} - ${member.role} at ${companyInformation.legalName}`}
+                        fill
+                        className="object-cover object-top transition-all duration-300"
+                        sizes="(max-width: 640px) 100vw, 200px"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-b from-[#FAF7F2] to-[#EFE8DF] p-4 text-center">
+                        <div className="w-16 h-16 rounded-full border border-[#B87333]/40 bg-[#FAF7F2] flex items-center justify-center font-serif text-xl text-[#B87333] font-semibold mb-2">
+                          {member.name.split(" ").map(n => n[0]).join("")}
+                        </div>
+                        <span className="font-serif text-xs text-[#1A1412] font-medium">{member.name}</span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Header Meta */}
                   <div className="sm:col-span-7">
-                    <span className="text-xs uppercase tracking-wider text-[#777777] font-semibold block mb-1">
+                    <span className="text-xs uppercase tracking-wider text-[#B87333] font-semibold block mb-1">
                       {companyInformation.legalName}
                     </span>
-                    <h2 className="text-2xl font-medium text-[#111111] mb-1">
+                    <h2 className="text-2xl font-serif font-medium text-[#111111] mb-1">
                       {member.name}
                     </h2>
-                    <p className="text-xs font-semibold text-[#444444] mb-3">
+                    <p className="text-xs font-semibold text-[#7A6F6B] mb-3">
                       {member.role}
                     </p>
-                    <Link
-                      href="/contact"
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#111111] hover:underline"
-                    >
-                      <span>Direct Contact Inquiry</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </Link>
+                    <div className="flex flex-col gap-2">
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#111111] hover:text-[#B87333] transition-colors"
+                      >
+                        <span>Direct Contact Inquiry</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 text-[#B87333]" />
+                      </Link>
+                      {member.linkedin && (
+                        <a
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0A66C2] hover:text-[#004182] transition-colors"
+                        >
+                          <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                          </svg>
+                          <span>Connect on LinkedIn</span>
+                          <ArrowUpRight className="w-3 h-3" />
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
 
@@ -88,8 +113,8 @@ export default function TeamPage() {
               {/* Verified Detail */}
               <div className="pt-6 border-t border-[#F0F0EE] flex items-center justify-between text-xs text-[#666666]">
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#111111]" />
-                  <span>Designated Principal Contact</span>
+                  <ShieldCheck className="w-4 h-4 text-[#B87333]" />
+                  <span>Designated Leadership Partner</span>
                 </div>
                 <span className="font-mono text-[11px] text-[#888888]">
                   LLPIN: {companyInformation.llpin}

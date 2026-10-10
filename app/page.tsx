@@ -1,12 +1,12 @@
 import Hero from "../components/Hero";
 import Stats from "../components/Stats";
-import CorporateInfoBlock from "../components/CorporateInfoBlock";
 import AboutPreview from "../components/AboutPreview";
 import ServiceCategories from "../components/ServiceCategories";
 import Services from "../components/Services";
 import InteractiveOperationsVisual from "../components/InteractiveOperationsVisual";
 import ProcessFlow from "../components/ProcessFlow";
 import WhyChooseUs from "../components/WhyChooseUs";
+import DataPrivacySection from "../components/DataPrivacySection";
 import Leadership from "../components/Leadership";
 import CTA from "../components/CTA";
 
@@ -18,9 +18,6 @@ export default function Home() {
 
       {/* SECTION 02 — TRUST / CREDENTIALS STATS */}
       <Stats />
-
-      {/* SECTION 03 — FACTUAL CORPORATE INFO TRUST BLOCK */}
-      <CorporateInfoBlock />
 
       {/* SECTION 04 — ABOUT / COMPANY INTRODUCTION */}
       <AboutPreview />
@@ -40,10 +37,13 @@ export default function Home() {
       {/* SECTION 08 — OUR PRINCIPLES */}
       <WhyChooseUs />
 
-      {/* SECTION 09 — PRINCIPAL CONTACTS / LEADERSHIP */}
+      {/* SECTION 09 — HIGHLIGHTED DATA PRIVACY & CONFIDENTIALITY */}
+      <DataPrivacySection />
+
+      {/* SECTION 10 — PRINCIPAL CONTACTS / LEADERSHIP */}
       <Leadership />
 
-      {/* SECTION 10 — ENGAGEMENT CTA */}
+      {/* SECTION 11 — ENGAGEMENT CTA */}
       <CTA />
     </>
   );

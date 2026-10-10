@@ -2,55 +2,15 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { Menu, X, ArrowUpRight, User, LogOut, ChevronDown } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import Button from "./Button";
 import { companyInformation } from "../data/team";
 
 export const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [currentUser, setCurrentUser] = useState<{ email: string; name?: string } | null>(null);
-  const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
   const pathname = usePathname();
-  const router = useRouter();
-
-  // Load and sync user auth session
-  useEffect(() => {
-    const syncAuth = () => {
-      try {
-        const sessionStr = localStorage.getItem("user_session");
-        if (sessionStr) {
-          const session = JSON.parse(sessionStr);
-          if (session?.loggedIn) {
-            setCurrentUser(session);
-            return;
-          }
-        }
-        setCurrentUser(null);
-      } catch {
-        setCurrentUser(null);
-      }
-    };
-
-    syncAuth();
-
-    // Listen to custom auth events and storage changes
-    window.addEventListener("auth-change", syncAuth);
-    window.addEventListener("storage", syncAuth);
-    return () => {
-      window.removeEventListener("auth-change", syncAuth);
-      window.removeEventListener("storage", syncAuth);
-    };
-  }, []);
-
-  const handleSignOut = () => {
-    localStorage.removeItem("user_session");
-    window.dispatchEvent(new Event("auth-change"));
-    setCurrentUser(null);
-    setProfileDropdownOpen(false);
-    router.push("/");
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -139,57 +99,6 @@ export const Navbar: React.FC = () => {
 
           {/* Right Action */}
           <div className="hidden lg:flex items-center gap-4">
-            {currentUser ? (
-              <div className="relative">
-                {/* Clean Initial Avatar Button */}
-                <button
-                  onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
-                  className="w-9 h-9 rounded-full bg-[#B87333] hover:bg-[#9E5F27] text-white flex items-center justify-center font-bold text-sm tracking-wide transition-all shadow-xs focus:outline-none focus:ring-2 focus:ring-[#B87333]/40 cursor-pointer"
-                  aria-label="User Account Menu"
-                  title={currentUser.name || currentUser.email}
-                >
-                  {(currentUser.name || currentUser.email).charAt(0).toUpperCase()}
-                </button>
-
-                {/* Dropdown Menu on Click */}
-                {profileDropdownOpen && (
-                  <div className="absolute right-0 mt-2.5 w-56 bg-white border border-[#E8E0D8] shadow-xl py-2 z-50 animate-in fade-in zoom-in-95 duration-150">
-                    <div className="px-4 py-2.5 border-b border-[#F0EAE3]">
-                      <div className="text-xs font-semibold text-[#1A1412] truncate">
-                        {currentUser.name || "Client Account"}
-                      </div>
-                      <div className="text-[11px] text-[#7A6F6B] truncate font-mono mt-0.5">
-                        {currentUser.email}
-                      </div>
-                    </div>
-
-                    <button
-                      onClick={handleSignOut}
-                      className="w-full text-left px-4 py-2.5 text-xs text-[#1A1412] hover:bg-[#FAF7F2] hover:text-[#B87333] flex items-center gap-2 transition-colors cursor-pointer"
-                    >
-                      <LogOut className="w-3.5 h-3.5 text-[#7A6F6B]" />
-                      <span className="font-medium">Sign Out</span>
-                    </button>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <>
-                <Link
-                  href="/login"
-                  className="text-[13px] font-medium tracking-wide uppercase text-[#3D312E] hover:text-[#B87333] transition-colors py-1"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  href="/register"
-                  className="text-[13px] font-semibold tracking-wide uppercase px-3.5 py-1.5 border border-[#B87333] text-[#B87333] hover:bg-[#B87333] hover:text-white transition-all shadow-xs"
-                >
-                  Register
-                </Link>
-              </>
-            )}
-
             <Button href="/contact" size="sm" variant="primary" icon>
               Contact Us
             </Button>
@@ -233,46 +142,6 @@ export const Navbar: React.FC = () => {
           </div>
 
           <div className="mt-8 pt-6 border-t border-[#E8E0D8] flex flex-col gap-3">
-            {currentUser ? (
-              <div className="space-y-3 mb-1">
-                <div className="p-3.5 bg-white border border-[#E8E0D8] flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-full bg-[#B87333] text-white flex items-center justify-center font-bold text-sm">
-                      {(currentUser.name || currentUser.email).charAt(0).toUpperCase()}
-                    </div>
-                    <div>
-                      <div className="text-xs font-semibold text-[#1A1412]">
-                        {currentUser.name || "Client Account"}
-                      </div>
-                      <div className="text-[11px] text-[#7A6F6B] font-mono">
-                        {currentUser.email}
-                      </div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={handleSignOut}
-                    className="px-3 py-1.5 text-xs font-medium text-[#1A1412] hover:text-[#B87333] border border-[#E8E0D8] bg-[#FAF7F2] transition-colors"
-                  >
-                    Sign Out
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div className="grid grid-cols-2 gap-3 mb-1">
-                <Link
-                  href="/login"
-                  className="py-2.5 text-center text-xs font-semibold uppercase tracking-wider border border-[#D5C9BE] text-[#1A1412] hover:bg-white transition-colors"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  href="/register"
-                  className="py-2.5 text-center text-xs font-semibold uppercase tracking-wider bg-[#B87333] text-white hover:bg-[#9E5F27] transition-colors"
-                >
-                  Register
-                </Link>
-              </div>
-            )}
             <div className="text-xs text-[#7A6F6B]">
               {companyInformation.legalName} • LLPIN: {companyInformation.llpin}
             </div>
