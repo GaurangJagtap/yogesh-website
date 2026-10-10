@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import Button from "./Button";
@@ -59,10 +60,16 @@ export const Navbar: React.FC = () => {
         }`}
       >
         <div className="container-custom flex items-center justify-between">
-          {/* Logo / Identity with Cognac Brand Mark */}
+          {/* Logo / Identity with Custom Logo Mark */}
           <Link href="/" className="flex items-center gap-3.5 group">
-            <div className="w-9 h-9 bg-[#2B211E] group-hover:bg-[#B87333] text-[#FAF7F2] flex items-center justify-center font-bold text-xs tracking-wider transition-colors shadow-sm">
-              {companyInformation.brandMark}
+            <div className="relative w-10 h-10 rounded-sm bg-white border border-[#E8E0D8] overflow-hidden flex items-center justify-center p-0.5 shadow-xs group-hover:border-[#B87333] transition-colors shrink-0">
+              <Image
+                src="/logo.jpg"
+                alt={`${companyInformation.legalName} Logo`}
+                fill
+                className="object-contain p-0.5"
+                priority
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-semibold tracking-tight text-[15px] text-[#1A1412] leading-none group-hover:text-[#B87333] transition-colors">
