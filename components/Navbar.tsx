@@ -62,9 +62,9 @@ export const Navbar: React.FC = () => {
         <div className="container-custom flex items-center justify-between">
           {/* Logo / Identity with Custom Logo Mark */}
           <Link href="/" className="flex items-center gap-3.5 group">
-            <div className="relative w-10 h-10 rounded-sm bg-white border border-[#E8E0D8] overflow-hidden flex items-center justify-center p-0.5 shadow-xs group-hover:border-[#B87333] transition-colors shrink-0">
+            <div className="relative w-12 h-10 rounded-sm bg-white border border-[#E8E0D8] overflow-hidden flex items-center justify-center p-0.5 shadow-xs group-hover:border-[#B87333] transition-colors shrink-0">
               <Image
-                src="/logo.jpg"
+                src="/logo.png"
                 alt={`${companyInformation.legalName} Logo`}
                 fill
                 className="object-contain p-0.5"

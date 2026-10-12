@@ -13,9 +13,9 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-[#2B211E]">
           <div className="lg:col-span-6 space-y-4">
             <div className="flex items-center gap-3.5">
-              <div className="relative w-9 h-9 rounded-sm bg-white overflow-hidden flex items-center justify-center p-0.5 shadow-sm shrink-0">
+              <div className="relative w-12 h-10 rounded-sm bg-white overflow-hidden flex items-center justify-center p-0.5 shadow-sm shrink-0">
                 <Image
-                  src="/logo.jpg"
+                  src="/logo.png"
                   alt={`${companyInformation.legalName} Logo`}
                   fill
                   className="object-contain p-0.5"
