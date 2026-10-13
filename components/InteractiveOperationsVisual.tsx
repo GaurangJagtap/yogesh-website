@@ -179,12 +179,16 @@ export const InteractiveOperationsVisual: React.FC = () => {
                   {current.description}
                 </p>
 
-                {/* Metrics Grid */}
-                <div className="grid grid-cols-3 gap-4 p-5 bg-[#FAF7F2] border border-[#E8E0D8] mb-8">
+                {/* Metrics Grid - responsive for mobile & desktop */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 p-4 sm:p-5 bg-[#FAF7F2] border border-[#E8E0D8] mb-8 divide-y sm:divide-y-0 sm:divide-x divide-[#E8E0D8]">
                   {current.metrics.map((m, idx) => (
-                    <div key={idx} className="space-y-1">
-                      <div className="text-[10px] font-mono uppercase text-[#7A6F6B]">{m.label}</div>
-                      <div className="text-base sm:text-lg font-semibold text-[#1A1412] font-mono">{m.value}</div>
+                    <div key={idx} className={`space-y-1 ${idx > 0 ? "pt-2.5 sm:pt-0 sm:pl-4" : ""}`}>
+                      <div className="text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-[#7A6F6B]">
+                        {m.label}
+                      </div>
+                      <div className="text-sm sm:text-base md:text-lg font-semibold text-[#1A1412] font-mono break-words leading-tight">
+                        {m.value}
+                      </div>
                     </div>
                   ))}
                 </div>
