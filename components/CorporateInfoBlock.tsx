@@ -46,13 +46,13 @@ export const CorporateInfoBlock: React.FC = () => {
             <div className="p-4 bg-[#FAF7F2] border border-[#E8E0D8] space-y-1">
               <div className="flex items-center gap-1.5 text-[#7A6F6B] font-medium uppercase tracking-wider text-[11px]">
                 <Calendar className="w-3.5 h-3.5 text-[#B87333]" />
-                <span>Incorporation</span>
+                <span>Track Record</span>
               </div>
               <div className="text-sm font-semibold text-[#1A1412]">
-                {companyInformation.incorporationDate}
+                {companyInformation.experienceYears}
               </div>
               <p className="text-[#7A6F6B] leading-relaxed text-[11px]">
-                Officially incorporated
+                Professional practice experience
               </p>
             </div>
 

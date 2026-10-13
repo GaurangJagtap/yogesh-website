@@ -15,8 +15,6 @@ export const companyInformation = {
   shortName: "ENTRABALANCE GLOBAL",
   brandMark: "EG",
   llpin: "ACF-4900",
-  incorporationDate: "2019",
-  incorporationYear: "2019",
   experienceYears: "5+ Years",
   clientsServed: "100+ Satisfied Clients",
   satisfactionRate: "100%",

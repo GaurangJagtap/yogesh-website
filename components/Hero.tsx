@@ -51,15 +51,15 @@ export const Hero: React.FC = () => {
             {/* Subtle factual credentials indicator */}
             <div className="mt-10 pt-6 border-t border-[#E8E0D8] flex flex-wrap items-center gap-6 text-xs text-[#7A6F6B]">
               <div>
-                <span className="font-semibold text-[#1A1412]">Established:</span> {companyInformation.incorporationDate}
-              </div>
-              <div className="hidden sm:block text-[#D5C9BE]">|</div>
-              <div>
                 <span className="font-semibold text-[#1A1412]">Experience:</span> {companyInformation.experienceYears}
               </div>
               <div className="hidden sm:block text-[#D5C9BE]">|</div>
               <div>
                 <span className="font-semibold text-[#1A1412]">Track Record:</span> {companyInformation.clientsServed}
+              </div>
+              <div className="hidden sm:block text-[#D5C9BE]">|</div>
+              <div>
+                <span className="font-semibold text-[#1A1412]">Satisfaction:</span> {companyInformation.satisfactionRate}
               </div>
             </div>
           </div>

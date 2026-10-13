@@ -106,8 +106,8 @@ export default function ContactPage() {
                   </div>
                   <div className="space-y-1.5 text-xs text-[#555555]">
                     <div><strong className="text-[#111111]">LLPIN:</strong> {companyInformation.llpin}</div>
-                    <div><strong className="text-[#111111]">Date of Incorporation:</strong> {companyInformation.incorporationDate}</div>
                     <div><strong className="text-[#111111]">Entity Type:</strong> {companyInformation.entityType}</div>
+                    <div><strong className="text-[#111111]">Practice Experience:</strong> {companyInformation.experienceYears}</div>
                   </div>
                 </div>
 

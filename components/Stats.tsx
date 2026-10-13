@@ -17,9 +17,9 @@ export const Stats: React.FC = () => {
       icon: FileText,
     },
     {
-      number: "2019",
-      label: "Heritage Founded",
-      detail: "Established institutional experience in accounting & transaction control",
+      number: "3+",
+      label: "Global Jurisdictions",
+      detail: "Active financial & accounting operations across US, UK & India",
       icon: Layers,
     },
     {

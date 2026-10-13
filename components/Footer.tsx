@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
             </p>
             <div className="pt-2 text-xs text-[#9E9086] space-y-1">
               <div><strong className="text-white">LLPIN:</strong> {companyInformation.llpin}</div>
-              <div><strong className="text-white">Incorporated:</strong> {companyInformation.incorporationDate}</div>
+              <div><strong className="text-white">Entity:</strong> {companyInformation.entityType}</div>
             </div>
           </div>
 
@@ -171,7 +171,7 @@ export const Footer: React.FC = () => {
                 <div className="text-white font-medium">Entity Registration</div>
                 <div>{companyInformation.legalName}</div>
                 <div>LLPIN: {companyInformation.llpin}</div>
-                <div className="text-[#9E9086] pt-1">Inc. Date: {companyInformation.incorporationDate}</div>
+                <div className="text-[#9E9086] pt-1">{companyInformation.entityType}</div>
               </div>
               <div className="space-y-1">
                 <div className="text-white font-medium">Principal Contacts</div>
