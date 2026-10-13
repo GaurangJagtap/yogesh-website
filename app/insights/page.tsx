@@ -6,7 +6,7 @@ import Button from "../../components/Button";
 import { insightsData } from "../../data/insights";
 
 export const metadata: Metadata = {
-  title: "Knowledge & Briefings | ENTRABALANCE GLOBAL LLP",
+  title: "Knowledge & Briefings | Entrabalance Global LLP",
   description:
     "Briefings, operational analysis, and perspectives on accounting operations, financial controls, and process improvement.",
 };

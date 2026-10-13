@@ -159,7 +159,7 @@ export const InteractiveOperationsVisual: React.FC = () => {
                   </div>
 
                   <div className="flex items-center justify-between text-white/90 text-xs pt-3 border-t border-white/10">
-                    <span className="font-mono text-[11px] text-[#D5C9BE]">ENTRABALANCE GLOBAL LLP &bull; Operations Workflow</span>
+                    <span className="font-mono text-[11px] text-[#D5C9BE]">Entrabalance Global LLP &bull; Operations Workflow</span>
                     <span className="font-mono text-[11px] text-[#B87333]">Audit-Verified</span>
                   </div>
                 </div>

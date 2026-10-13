@@ -4,9 +4,9 @@ import Button from "../../components/Button";
 import { ArrowUpRight, CheckCircle2, Briefcase, GraduationCap, Users } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Careers & Culture | ENTRABALANCE GLOBAL LLP",
+  title: "Careers & Culture | Entrabalance Global LLP",
   description:
-    "Build a career in accounting operations, transaction processing, and financial control with ENTRABALANCE GLOBAL LLP.",
+    "Build a career in accounting operations, transaction processing, and financial control with Entrabalance Global LLP.",
 };
 
 export default function CareersPage() {
@@ -57,7 +57,7 @@ export default function CareersPage() {
           <div className="flex items-center gap-2 mb-4">
             <span className="w-8 h-px bg-[#111111]" />
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#666666]">
-              Careers at ENTRABALANCE GLOBAL LLP
+              Careers at Entrabalance Global LLP
             </span>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-[#111111] leading-[1.1] mb-8">

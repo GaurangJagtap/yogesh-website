@@ -35,11 +35,11 @@ export const CorporateInfoBlock: React.FC = () => {
                 <FileText className="w-3.5 h-3.5 text-[#B87333]" />
                 <span>Registration Identifier</span>
               </div>
-              <div className="font-mono text-sm font-semibold text-[#1A1412]">
-                LLPIN: {companyInformation.llpin}
+              <div className="text-sm font-semibold text-[#1A1412]">
+                {companyInformation.entityType}
               </div>
               <p className="text-[#7A6F6B] leading-relaxed text-[11px]">
-                Registered Limited Liability Partnership
+                Active registered corporate partnership
               </p>
             </div>
 

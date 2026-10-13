@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!article) return { title: "Article Not Found" };
 
   return {
-    title: `${article.title} | ENTRABALANCE GLOBAL LLP`,
+    title: `${article.title} | Entrabalance Global LLP`,
     description: article.excerpt,
   };
 }

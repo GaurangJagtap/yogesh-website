@@ -21,7 +21,7 @@ export const AboutPreview: React.FC = () => {
             <div className="relative aspect-[16/11] w-full bg-[#FFFFFF] overflow-hidden border border-[#E8E0D8] shadow-md group">
               <Image
                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200"
-                alt="Professional accounting and financial operations workplace at ENTRABALANCE GLOBAL LLP"
+                alt="Professional accounting and financial operations workplace at Entrabalance Global LLP"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 600px"
@@ -41,8 +41,8 @@ export const AboutPreview: React.FC = () => {
 
             <div className="mt-4 flex items-center justify-between text-xs text-[#7A6F6B] border-t border-[#E8E0D8] pt-3">
               <span className="font-semibold text-[#1A1412]">{companyInformation.legalName}</span>
-              <span className="font-mono text-[#B87333]">
-                LLPIN: {companyInformation.llpin}
+              <span className="text-[#7A6F6B]">
+                {companyInformation.entityType}
               </span>
             </div>
           </div>

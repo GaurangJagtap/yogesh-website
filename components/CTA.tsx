@@ -45,10 +45,6 @@ export const CTA: React.FC = () => {
               <div>
                 <span className="text-[#1A1412] font-semibold">Principal Contacts:</span> {companyInformation.principalContacts.map(c => c.name).join(" / ")}
               </div>
-              <div className="hidden sm:block text-[#D5C9BE]">&bull;</div>
-              <div>
-                <span className="text-[#1A1412] font-semibold">LLPIN:</span> {companyInformation.llpin}
-              </div>
             </div>
           </div>
         </div>

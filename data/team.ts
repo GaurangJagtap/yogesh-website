@@ -11,8 +11,8 @@ export interface PrincipalContact {
 }
 
 export const companyInformation = {
-  legalName: "ENTRABALANCE GLOBAL LLP",
-  shortName: "ENTRABALANCE GLOBAL",
+  legalName: "Entrabalance Global LLP",
+  shortName: "Entrabalance Global",
   brandMark: "EG",
   llpin: "ACF-4900",
   experienceYears: "5+ Years",

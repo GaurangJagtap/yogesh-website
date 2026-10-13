@@ -673,7 +673,7 @@ export const servicesData: ServiceItem[] = [
     relatedIndustries: ["Financial Services", "Technology & Services", "Manufacturing & Supply", "Commercial Trade"],
     faqs: [
       {
-        question: "Does ENTRABALANCE GLOBAL LLP conduct the statutory audit or support the audit process?",
+        question: "Does Entrabalance Global LLP conduct the statutory audit or support the audit process?",
         answer: "We provide comprehensive audit support services—preparing schedules, assembling documentation, and coordinating PBC items—to assist clients in successfully completing audits conducted by their appointed external auditors."
       },
       {

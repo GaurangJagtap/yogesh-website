@@ -118,7 +118,7 @@ export default function AboutPage() {
             <div className="relative aspect-[4/3] w-full bg-[#F3F3F0] border border-[#E0E0DC] overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1200"
-                alt="Professional corporate accounting operations at ENTRABALANCE GLOBAL LLP"
+                alt="Professional corporate accounting operations at Entrabalance Global LLP"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 600px"
@@ -126,7 +126,7 @@ export default function AboutPage() {
             </div>
             <div className="mt-3 text-xs text-[#777777] flex justify-between">
               <span>{companyInformation.legalName}</span>
-              <span>LLPIN: {companyInformation.llpin}</span>
+              <span>{companyInformation.entityType}</span>
             </div>
           </div>
         </div>

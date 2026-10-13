@@ -25,14 +25,14 @@ export async function POST(request: Request) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "ENTRABALANCE Portal <onboarding@resend.dev>",
+          from: "Entrabalance Portal <onboarding@resend.dev>",
           to: [recipient],
           reply_to: email,
           subject: `Consultation Request: ${serviceType || "General"} — ${name}`,
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid #E8E0D8; background-color: #FAF7F2; color: #1A1412;">
               <h2 style="color: #B87333; margin-bottom: 8px;">New Client Consultation Request</h2>
-              <p style="font-size: 13px; color: #7A6F6B; margin-top: 0;">Received via ENTRABALANCE GLOBAL LLP Client Portal</p>
+              <p style="font-size: 13px; color: #7A6F6B; margin-top: 0;">Received via Entrabalance Global LLP Client Portal</p>
               
               <div style="background-color: #ffffff; padding: 20px; border: 1px solid #E8E0D8; margin: 20px 0;">
                 <p style="margin: 8px 0;"><strong>Client Full Name:</strong> ${name}</p>
@@ -48,7 +48,7 @@ export async function POST(request: Request) {
               </div>
 
               <p style="font-size: 11px; color: #7A6F6B; text-align: center; margin-top: 24px;">
-                ENTRABALANCE GLOBAL LLP &bull; LLPIN: ACF-4900 &bull; Confidential Client Communication
+                Entrabalance Global LLP &bull; LLPIN: ACF-4900 &bull; Confidential Client Communication
               </p>
             </div>
           `,

@@ -5,7 +5,7 @@ import { industriesData } from "../../data/industries";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Industry Focus | ENTRABALANCE GLOBAL LLP",
+  title: "Industry Focus | Entrabalance Global LLP",
   description:
     "Accounting operations, transaction processing, and financial control tailored across key industry sectors.",
 };

@@ -29,7 +29,6 @@ export const Footer: React.FC = () => {
               Accounting Operations. Financial Accuracy. Better Business Processes. Supporting businesses with transaction processing, accounting controls, reporting, and process improvement.
             </p>
             <div className="pt-2 text-xs text-[#9E9086] space-y-1">
-              <div><strong className="text-white">LLPIN:</strong> {companyInformation.llpin}</div>
               <div><strong className="text-white">Entity:</strong> {companyInformation.entityType}</div>
             </div>
           </div>
@@ -43,7 +42,7 @@ export const Footer: React.FC = () => {
                 Consult With Our Principal Contacts
               </div>
               <div className="text-xs text-[#9E9086] mt-1">
-                Direct WhatsApp Line: {companyInformation.whatsappNumber}
+                Direct WhatsApp Consultation Desk
               </div>
             </div>
             <div className="flex flex-wrap items-center gap-3">

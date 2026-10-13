@@ -10,7 +10,7 @@ import { companyInformation } from "../../data/team";
 export const metadata: Metadata = {
   title: `Services & Work Areas | ${companyInformation.legalName}`,
   description:
-    "Explore the 10 work areas and 3 core operational categories provided by ENTRABALANCE GLOBAL LLP: Transaction Work, Accounting Control, and Specialist Work.",
+    "Explore the 10 work areas and 3 core operational categories provided by Entrabalance Global LLP: Transaction Work, Accounting Control, and Specialist Work.",
 };
 
 export default function ServicesPage() {

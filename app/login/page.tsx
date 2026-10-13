@@ -234,7 +234,7 @@ export default function LoginPage() {
                     href="#forgot"
                     onClick={(e) => {
                       e.preventDefault();
-                      alert("Please contact your principal contact at ENTRABALANCE GLOBAL LLP for password reset assistance.");
+                      alert("Please contact your principal contact at Entrabalance Global LLP for password reset assistance.");
                     }}
                     className="text-[11px] text-[#B87333] hover:underline"
                   >

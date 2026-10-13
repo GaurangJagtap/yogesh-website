@@ -150,7 +150,7 @@ export const Navbar: React.FC = () => {
 
           <div className="mt-8 pt-6 border-t border-[#E8E0D8] flex flex-col gap-3">
             <div className="text-xs text-[#7A6F6B]">
-              {companyInformation.legalName} • LLPIN: {companyInformation.llpin}
+              {companyInformation.legalName}
             </div>
             <Button
               href="/contact"

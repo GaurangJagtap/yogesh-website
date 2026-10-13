@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "Financial Reporting",
     "Audit Support",
     "Process Improvement",
-    "ENTRABALANCE GLOBAL LLP",
+    "Entrabalance Global LLP",
   ],
   authors: [{ name: companyInformation.legalName }],
   openGraph: {
