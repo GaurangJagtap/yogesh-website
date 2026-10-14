@@ -177,7 +177,14 @@ export const Footer: React.FC = () => {
                 {companyInformation.principalContacts.map((contact, i) => (
                   <div key={i}>{contact.name} ({contact.role})</div>
                 ))}
-                <div className="text-[#9E9086] pt-1">Direct inquiries via contact desk</div>
+                <div className="pt-1.5">
+                  <a
+                    href={`mailto:${companyInformation.contactEmail}`}
+                    className="text-[#B87333] hover:text-[#d38b47] transition-colors font-mono text-[11px]"
+                  >
+                    {companyInformation.contactEmail}
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -13,7 +13,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const recipient = process.env.CONSULTATION_RECIPIENT || "gaurangdadujagtap@gmail.com";
+    const recipient = process.env.CONSULTATION_RECIPIENT || "contact@entrabalance.com";
     const resendApiKey = process.env.RESEND_API_KEY;
 
     // Production Path 1: If RESEND_API_KEY is configured in .env.local

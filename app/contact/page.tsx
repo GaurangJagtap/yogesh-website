@@ -46,7 +46,7 @@ export default function ContactPage() {
     setErrorMessage("");
 
     try {
-      // Dispatch via Next.js backend API (supports Resend & fallback mailers directly to gaurangdadujagtap@gmail.com)
+      // Dispatch via Next.js backend API (supports Resend & fallback mailers directly to contact@entrabalance.com)
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -107,6 +107,15 @@ export default function ContactPage() {
                   <div className="space-y-1.5 text-xs text-[#555555]">
                     <div><strong className="text-[#111111]">Entity Type:</strong> {companyInformation.entityType}</div>
                     <div><strong className="text-[#111111]">Practice Experience:</strong> {companyInformation.experienceYears}</div>
+                    <div>
+                      <strong className="text-[#111111]">Official Inquiries:</strong>{" "}
+                      <a
+                        href={`mailto:${companyInformation.contactEmail}`}
+                        className="text-[#B87333] hover:underline font-medium"
+                      >
+                        {companyInformation.contactEmail}
+                      </a>
+                    </div>
                   </div>
                 </div>
 

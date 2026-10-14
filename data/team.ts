@@ -19,6 +19,7 @@ export const companyInformation = {
   clientsServed: "3270+ Satisfied Clients",
   satisfactionRate: "100%",
   entityType: "Limited Liability Partnership (LLP)",
+  contactEmail: "contact@entrabalance.com",
   whatsappNumber: "+91 89996 00315",
   whatsappRaw: "918999600315",
   whatsappUrl: "https://wa.me/918999600315?text=Hello%20Yogeshwar,%20I%20would%20like%20to%20enquire%20about%20your%20accounting%20and%20financial%20operations%20services.",
