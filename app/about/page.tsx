@@ -60,11 +60,11 @@ export default function AboutPage() {
               </div>
               <div className="hidden sm:block text-[#D5C9BE]">|</div>
               <div>
-                <span className="font-semibold text-[#1A1412]">Practice Experience:</span> 5+ Years Consistent Delivery
+                <span className="font-semibold text-[#1A1412]">Practice Experience:</span> 7+ Years Consistent Delivery
               </div>
               <div className="hidden sm:block text-[#D5C9BE]">|</div>
               <div>
-                <span className="font-semibold text-[#1A1412]">Track Record:</span> 100+ Satisfied Corporate Clients
+                <span className="font-semibold text-[#1A1412]">Track Record:</span> 3270+ Satisfied Corporate Clients
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default function AboutPage() {
                   Corporate Practice
                 </span>
                 <span className="text-xs font-medium text-white/95">
-                  5+ years across US, UK &amp; India &bull; 100% Client Satisfaction
+                  7+ years across US, UK &amp; India &bull; 100% Client Satisfaction
                 </span>
               </div>
             </div>

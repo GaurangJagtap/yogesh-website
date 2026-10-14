@@ -5,13 +5,13 @@ import { companyInformation } from "../data/team";
 export const Stats: React.FC = () => {
   const corporateFacts = [
     {
-      number: "5+",
+      number: "7+",
       label: "Years Practice Experience",
       detail: "Delivering trusted accounting, taxation & financial operations across US, UK & India",
       icon: Calendar,
     },
     {
-      number: "100+",
+      number: "3270+",
       label: "Satisfied Corporate Clients",
       detail: "Proven track record supporting multi-jurisdiction business processes",
       icon: FileText,

@@ -15,8 +15,8 @@ export const companyInformation = {
   shortName: "Entrabalance Global",
   brandMark: "EG",
   llpin: "ACF-4900",
-  experienceYears: "5+ Years",
-  clientsServed: "100+ Satisfied Clients",
+  experienceYears: "7+ Years",
+  clientsServed: "3270+ Satisfied Clients",
   satisfactionRate: "100%",
   entityType: "Limited Liability Partnership (LLP)",
   whatsappNumber: "+91 89996 00315",
@@ -37,7 +37,7 @@ export const companyInformation = {
     }
   ],
   tagline: "Accounting Operations. Financial Accuracy. Better Business Processes.",
-  positioning: "Supporting businesses across US, UK & India with 5+ years of trusted accounting operations, transaction processing, financial reporting, and process improvement."
+  positioning: "Supporting businesses across US, UK & India with 7+ years of trusted accounting operations, transaction processing, financial reporting, and process improvement."
 };
 
 export const leadershipData: PrincipalContact[] = [
@@ -46,7 +46,7 @@ export const leadershipData: PrincipalContact[] = [
     name: "Yogeshwar Kale",
     role: "Managing Director & Co-Founder",
     category: "Designated Leadership",
-    bio: "Managing Director & Founder with 5+ years of demonstrated excellence leading accounting, taxation, and financial operations across the US, UK, and India, delivering a 100% client satisfaction track record across 100+ satisfied corporate clients.",
+    bio: "Managing Director & Founder with 7+ years of demonstrated excellence leading accounting, taxation, and financial operations across the US, UK, and India, delivering a 100% client satisfaction track record across 3270+ satisfied corporate clients.",
     image: "/yogeshwar-kale.jpg",
     linkedin: "https://www.linkedin.com/in/yogeshwar-kale-b7b61a1ba?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     phone: "+91 89996 00315",

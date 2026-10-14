@@ -114,7 +114,7 @@ export default function ContactPage() {
                 <div className="border border-[#E5E5E2] p-6 bg-[#FAFAFA] space-y-4">
                   <div className="text-xs uppercase tracking-wider text-[#777777] font-semibold flex items-center justify-between">
                     <span>Principal Contacts</span>
-                    <span className="text-[10px] text-[#B87333] font-mono">5+ Years Practice</span>
+                    <span className="text-[10px] text-[#B87333] font-mono">7+ Years Practice</span>
                   </div>
                   <div className="space-y-4">
                     {companyInformation.principalContacts.map((contact, idx) => (
