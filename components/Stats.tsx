@@ -236,35 +236,36 @@ export const Stats: React.FC = () => {
             {[...clientShowcase, ...clientShowcase].map((client, idx) => (
               <div
                 key={idx}
-                className="relative w-72 sm:w-80 shrink-0 bg-[#FAF7F2] border border-[#E8E0D8] hover:border-[#B87333] transition-all p-4 rounded-sm shadow-2xs hover:shadow-md group flex flex-col justify-between overflow-hidden"
+                className="relative w-76 sm:w-84 shrink-0 bg-[#1A1412] border border-[#B87333]/30 hover:border-[#B87333] transition-all p-4 rounded-sm shadow-md hover:shadow-xl group flex flex-col justify-between overflow-hidden min-h-[140px]"
               >
-                {/* Real finance / audit / consultancy background image with soft luxury overlay */}
-                <div
-                  className="absolute inset-0 bg-cover bg-center opacity-[0.09] group-hover:opacity-[0.16] transition-opacity duration-300 pointer-events-none filter saturate-50"
-                  style={{ backgroundImage: `url(${client.bgImage})` }}
+                {/* Real finance / audit / consultancy background image */}
+                <img
+                  src={client.bgImage}
+                  alt={`${client.name} - ${client.category}`}
+                  className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
-                {/* Subtle gradient overlay to preserve optimal readability */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#FAF7F2]/95 via-[#FAF7F2]/85 to-[#FFFFFF]/90 pointer-events-none" />
+                {/* Rich dark luxury gradient overlay so text is 100% readable while image is clearly seen */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#140F0D]/95 via-[#1A1412]/80 to-[#1A1412]/70 group-hover:via-[#1A1412]/70 transition-colors pointer-events-none" />
 
                 <div className="relative z-10 flex items-center gap-3 mb-2.5">
                   <div
-                    className="w-10 h-10 rounded-sm text-white flex items-center justify-center font-serif text-sm font-bold tracking-wider shrink-0 border border-[#B87333]/40 group-hover:scale-105 transition-transform shadow-xs"
+                    className="w-10 h-10 rounded-sm text-white flex items-center justify-center font-serif text-sm font-bold tracking-wider shrink-0 border border-[#B87333]/60 group-hover:scale-105 transition-transform shadow-md"
                     style={{ backgroundColor: client.accent }}
                   >
                     {client.initials}
                   </div>
                   <div className="overflow-hidden">
-                    <h5 className="text-xs font-semibold text-[#1A1412] truncate group-hover:text-[#B87333] transition-colors">
+                    <h5 className="text-xs font-semibold text-[#FFFFFF] truncate group-hover:text-[#E8A87C] transition-colors drop-shadow-xs">
                       {client.name}
                     </h5>
-                    <span className="text-[10px] text-[#7A6F6B] block truncate font-mono">
+                    <span className="text-[10px] text-[#D5C9BE] block truncate font-mono">
                       {client.category}
                     </span>
                   </div>
                 </div>
-                <div className="relative z-10 pt-2 border-t border-[#EFE8E1] text-[11px] text-[#4A423E] italic leading-snug flex items-start gap-1.5 font-sans">
-                  <Quote className="w-3 h-3 text-[#B87333] shrink-0 mt-0.5" />
-                  <span className="line-clamp-2">&ldquo;{client.quote}&rdquo;</span>
+                <div className="relative z-10 pt-2 border-t border-white/15 text-[11px] text-[#F3EEEA] italic leading-snug flex items-start gap-1.5 font-sans">
+                  <Quote className="w-3.5 h-3.5 text-[#B87333] shrink-0 mt-0.5" />
+                  <span className="line-clamp-2 drop-shadow-xs">&ldquo;{client.quote}&rdquo;</span>
                 </div>
               </div>
             ))}
