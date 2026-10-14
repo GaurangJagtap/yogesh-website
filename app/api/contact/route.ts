@@ -25,7 +25,7 @@ export async function POST(request: Request) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "Entrabalance Portal <onboarding@resend.dev>",
+          from: "Entrabalance Inquiries <notifications@entrabalance.com>",
           to: [recipient],
           reply_to: email,
           subject: `Consultation Request: ${serviceType || "General"} — ${name}`,
