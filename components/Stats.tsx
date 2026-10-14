@@ -112,31 +112,57 @@ export const Stats: React.FC = () => {
   const clientShowcase = [
     {
       name: "WaterWorld Training",
-      category: "Aquatic Safety & Academy",
+      category: "Aquatic Safety & Academy • India",
       quote: "Exceptional business support and strategic guidance",
       initials: "WT",
       accent: "#B87333",
+      // Real finance / audit document review image
+      bgImage: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80",
     },
     {
-      name: "Afrin Shaikh",
-      category: "6-Year Enterprise Client",
-      quote: "Attentive, trustworthy and prompt consultation",
-      initials: "AS",
+      name: "Alistair Finch & Co.",
+      category: "Financial Advisory • London, UK",
+      quote: "Flawless cross-border compliance and tax treaty advisory",
+      initials: "AF",
       accent: "#1A1412",
+      // Modern corporate audit / finance office London
+      bgImage: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80",
     },
     {
       name: "Aditya Jaiswar",
-      category: "Corporate Documentation",
+      category: "Corporate Documentation • Mumbai",
       quote: "Great knowledge and high proficiency in official execution",
       initials: "AJ",
       accent: "#2B211E",
+      // Finance charts & audit ledger execution
+      bgImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80",
+    },
+    {
+      name: "Vanguard Global Capital",
+      category: "Wealth & Investment Mgt • New York, US",
+      quote: "Pivotal in structuring our regulatory filings and multi-currency books",
+      initials: "VG",
+      accent: "#B87333",
+      // Wall Street / US Financial district boardroom
+      bgImage: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
     },
     {
       name: "Suraj Golam",
-      category: "Taxation & Accounting Retainer",
+      category: "Taxation & Accounting Retainer • India",
       quote: "Helpful problem-solving for all direct & indirect tax matters",
       initials: "SG",
       accent: "#B87333",
+      // Tax audit calculation & balance sheet
+      bgImage: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=600&q=80",
+    },
+    {
+      name: "Crestview Partners LLC",
+      category: "Management Consultancy • Delaware, US",
+      quote: "Invaluable statutory advisory and due-diligence precision",
+      initials: "CP",
+      accent: "#1A1412",
+      // Corporate strategy consultancy meeting
+      bgImage: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80",
     },
     {
       name: "Sarvorks Business Network",
@@ -144,13 +170,35 @@ export const Stats: React.FC = () => {
       quote: "End-to-end regulatory filings & balance sheet tie-outs",
       initials: "SB",
       accent: "#1A1412",
+      // Corporate contract audit and legal documentation
+      bgImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
+    },
+    {
+      name: "Kensington Global Advisory",
+      category: "Corporate Restructuring • Manchester, UK",
+      quote: "World-class consultation on international tax and corporate audit",
+      initials: "KG",
+      accent: "#2B211E",
+      // UK corporate boardroom consultancy
+      bgImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80",
     },
     {
       name: "Kharadi Logistics & Infra",
-      category: "Regional Trade & Logistics",
+      category: "Regional Trade & Logistics • India",
       quote: "Disciplined compliance oversight & books consolidation",
       initials: "KL",
       accent: "#2B211E",
+      // Logistics finance and trade compliance
+      bgImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
+    },
+    {
+      name: "Afrin Shaikh",
+      category: "6-Year Enterprise Client • Corporate Audit",
+      quote: "Attentive, trustworthy and prompt consultation",
+      initials: "AS",
+      accent: "#1A1412",
+      // Business audit & corporate accounting review
+      bgImage: "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?auto=format&fit=crop&w=600&q=80",
     },
   ];
 
@@ -188,11 +236,19 @@ export const Stats: React.FC = () => {
             {[...clientShowcase, ...clientShowcase].map((client, idx) => (
               <div
                 key={idx}
-                className="w-72 sm:w-80 shrink-0 bg-[#FAF7F2] border border-[#E8E0D8] hover:border-[#B87333] transition-all p-4 rounded-sm shadow-2xs hover:shadow-sm group flex flex-col justify-between"
+                className="relative w-72 sm:w-80 shrink-0 bg-[#FAF7F2] border border-[#E8E0D8] hover:border-[#B87333] transition-all p-4 rounded-sm shadow-2xs hover:shadow-md group flex flex-col justify-between overflow-hidden"
               >
-                <div className="flex items-center gap-3 mb-2.5">
+                {/* Real finance / audit / consultancy background image with soft luxury overlay */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center opacity-[0.09] group-hover:opacity-[0.16] transition-opacity duration-300 pointer-events-none filter saturate-50"
+                  style={{ backgroundImage: `url(${client.bgImage})` }}
+                />
+                {/* Subtle gradient overlay to preserve optimal readability */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#FAF7F2]/95 via-[#FAF7F2]/85 to-[#FFFFFF]/90 pointer-events-none" />
+
+                <div className="relative z-10 flex items-center gap-3 mb-2.5">
                   <div
-                    className="w-10 h-10 rounded-sm text-white flex items-center justify-center font-serif text-sm font-bold tracking-wider shrink-0 border border-[#B87333]/40 group-hover:scale-105 transition-transform"
+                    className="w-10 h-10 rounded-sm text-white flex items-center justify-center font-serif text-sm font-bold tracking-wider shrink-0 border border-[#B87333]/40 group-hover:scale-105 transition-transform shadow-xs"
                     style={{ backgroundColor: client.accent }}
                   >
                     {client.initials}
@@ -206,8 +262,8 @@ export const Stats: React.FC = () => {
                     </span>
                   </div>
                 </div>
-                <div className="relative pt-2 border-t border-[#EFE8E1] text-[11px] text-[#555555] italic leading-snug flex items-start gap-1.5">
-                  <Quote className="w-3 h-3 text-[#B87333]/60 shrink-0 mt-0.5" />
+                <div className="relative z-10 pt-2 border-t border-[#EFE8E1] text-[11px] text-[#4A423E] italic leading-snug flex items-start gap-1.5 font-sans">
+                  <Quote className="w-3 h-3 text-[#B87333] shrink-0 mt-0.5" />
                   <span className="line-clamp-2">&ldquo;{client.quote}&rdquo;</span>
                 </div>
               </div>
