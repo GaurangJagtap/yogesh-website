@@ -147,3 +147,25 @@
   animation-play-state: paused;
 }
 
+/* Continuous Live Auto-Slider for Operational Pillars */
+@keyframes pillarMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-pillar-slide {
+  display: flex;
+  width: max-content;
+  animation: pillarMarquee 38s linear infinite;
+  will-change: transform;
+}
+
+.animate-pillar-slide:hover,
+.animate-pillar-slide:focus-within {
+  animation-play-state: paused;
+}
+
