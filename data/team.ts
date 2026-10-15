@@ -59,6 +59,6 @@ export const leadershipData: PrincipalContact[] = [
     role: "Co-Founder & Principal Partner",
     category: "Designated Leadership",
     bio: "Co-Founder and principal partner supporting client mandates across transaction processing, accounting controls, period-end financial tie-outs, and disciplined workflow improvements.",
-    image: ""
+    image: "/shubham-agarwal.png"
   }
 ];

@@ -37,38 +37,27 @@ export default function ServicesPage() {
             <span className="text-xs font-semibold text-[#1A1412] uppercase tracking-wider mr-2">
               Practice Groups:
             </span>
-            <a
-              href="#transaction-work"
-              className="px-4 py-2 text-xs font-medium text-[#2B211E] bg-[#FAF7F2] hover:bg-[#B87333] hover:text-white border border-[#E8E0D8] transition-all flex items-center gap-1.5"
-            >
-              <span>01. Transaction Work</span>
-              <span className="text-[10px] opacity-70">↓</span>
-            </a>
-            <a
-              href="#accounting-control"
-              className="px-4 py-2 text-xs font-medium text-[#2B211E] bg-[#FAF7F2] hover:bg-[#B87333] hover:text-white border border-[#E8E0D8] transition-all flex items-center gap-1.5"
-            >
-              <span>02. Accounting Control</span>
-              <span className="text-[10px] opacity-70">↓</span>
-            </a>
-            <a
-              href="#specialist-work"
-              className="px-4 py-2 text-xs font-medium text-[#2B211E] bg-[#FAF7F2] hover:bg-[#B87333] hover:text-white border border-[#E8E0D8] transition-all flex items-center gap-1.5"
-            >
-              <span>03. Specialist Support</span>
-              <span className="text-[10px] opacity-70">↓</span>
-            </a>
+            {serviceCategoryGroups.map((group, i) => (
+              <a
+                key={group.id}
+                href={`#${group.id}`}
+                className="px-3.5 py-1.5 text-xs font-medium text-[#2B211E] bg-[#FAF7F2] hover:bg-[#B87333] hover:text-white border border-[#E8E0D8] transition-all flex items-center gap-1.5"
+              >
+                <span>0{i + 1}. {group.title}</span>
+                <span className="text-[10px] opacity-70">↓</span>
+              </a>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 3 Detailed Operational Capability Dossiers */}
+      {/* 5 Detailed Operational Capability Dossiers */}
       <section className="py-20 md:py-28 bg-[#FAF7F2] border-b border-[#E8E0D8]">
         <div className="container-custom">
           <SectionHeading
             eyebrow="Practice Disciplines"
-            title="Three core operational areas detailed."
-            description="Our service framework is organized into three distinct practice groups based on operational focus, frequency, and financial risk profiles."
+            title="Five core operational areas detailed."
+            description="Our service framework is organized into five distinct practice groups based on operational focus, frequency, statutory obligations, and financial risk profiles."
           />
 
           <div className="space-y-12 mt-12">
@@ -76,12 +65,16 @@ export default function ServicesPage() {
               const pillarImages = [
                 "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&q=80&w=1000",
                 "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1000",
-                "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1000"
+                "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1000",
+                "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=1000",
+                "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000"
               ];
               const pillarStats = [
                 { cadence: "Continuous / Daily", focus: "Payables, Receivables & Bank Feeds", risk: "Cash Leakage & Late Invoicing" },
                 { cadence: "Weekly & Monthly Close", focus: "General Ledger, Accruals & Balance Tie-outs", risk: "Unidentified Variances & Imbalances" },
-                { cadence: "Monthly, Quarterly & Annual", focus: "Management Reports, Payroll & Audit Fulfillment", risk: "Compliance Penalties & Reporting Lags" }
+                { cadence: "Monthly, Quarterly & Annual", focus: "Management Reports, Payroll & Ad-hoc Requests", risk: "Compliance Penalties & Reporting Lags" },
+                { cadence: "Monthly & Quarterly Statutory", focus: "Sales Tax / VAT, Withholding & Statutory Filings", risk: "Tax Non-compliance, Penalties & Audits" },
+                { cadence: "Quarterly, Annual & Ongoing", focus: "Audit Dossiers, Forecasting & Working Capital", risk: "Audit Deficiencies & Cash Inefficiencies" }
               ];
               const stats = pillarStats[idx] || pillarStats[0];
 

@@ -798,5 +798,34 @@ export const serviceCategoryGroups: ServiceCategoryGroup[] = [
       "Process Improvement"
     ],
     services: servicesData.filter((s) => s.category === "Specialist Work")
+  },
+  {
+    id: "taxation-compliance",
+    title: "Taxation & Compliance",
+    tagline: "Direct & indirect corporate tax adherence, statutory filings, and regulatory readiness",
+    description: "Comprehensive tax schedule preparation, sales tax nexus tracking, withholding tax reviews, and end-to-end statutory compliance across global operating jurisdictions.",
+    items: [
+      "Corporate Income Tax Preparation",
+      "Sales Tax & VAT Filings",
+      "Withholding & Payroll Tax",
+      "Statutory Regulatory Filings",
+      "Tax Ledger Reconciliation"
+    ],
+    services: servicesData.filter((s) => s.id === "05" || s.id === "08")
+  },
+  {
+    id: "financial-audit",
+    title: "Financial Advisory & Audit",
+    tagline: "Audit trail readiness, management dashboards, working capital, and financial forecasting",
+    description: "Strategic financial insights, external audit package preparation, variance investigations, and cash-flow management empowering executive decision-makers.",
+    items: [
+      "Audit Working Papers & Evidence",
+      "External Auditor Liaison Support",
+      "Budgeting & Cash Flow Forecasting",
+      "KPI & Working Capital Analysis",
+      "Internal Financial Controls Testing"
+    ],
+    services: servicesData.filter((s) => s.id === "06" || s.id === "07" || s.id === "09")
   }
 ];
+
