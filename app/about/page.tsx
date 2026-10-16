@@ -104,7 +104,7 @@ export default function AboutPage() {
               A dedicated focus on operational clarity, transaction discipline, and reliable accounting records.
             </h2>
             <p>
-              With over 5 years of proven delivery across the US, UK, and India, our leadership has built a steadfast reputation supporting more than 100 corporate clients with structured accounting operations, transaction processing, and rigorous compliance.
+              With over 7+ years of proven delivery across the US, UK, and India, our leadership has built a steadfast reputation supporting more than 100 corporate clients with structured accounting operations, transaction processing, and rigorous compliance.
             </p>
             <p className="text-base text-[#666666]">
               We assist businesses in managing day-to-day transaction workflows, reconciling bank accounts and sub-ledgers, executing structured month-end closes, and maintaining verified financial reporting schedules with an uncompromised 100% satisfaction record.
