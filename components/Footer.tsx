@@ -207,14 +207,61 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Location 1 — Pune Office (Active with Map & Link) */}
+            {/* Location 1 — Primary USA Corporate Office */}
             <div className="bg-[#221A17] border border-[#382B27] rounded-sm overflow-hidden flex flex-col group hover:border-[#B87333]/60 transition-all">
               <div className="p-4 bg-[#281F1B] border-b border-[#382B27] flex items-start justify-between gap-3">
                 <div className="flex items-start gap-2.5">
                   <MapPin className="w-4 h-4 text-[#B87333] shrink-0 mt-0.5" />
                   <div>
                     <span className="text-[10px] uppercase font-mono tracking-wider text-[#B87333] block">
-                      India Operations Office
+                      Primary Office &bull; United States
+                    </span>
+                    <span className="text-xs sm:text-sm font-medium text-white leading-snug">
+                      1317 Edgewater Dr. Suite #000 Orlando, FL 32804
+                    </span>
+                  </div>
+                </div>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=1317+Edgewater+Dr+Suite+%23000+Orlando+FL+32804"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#B87333] hover:bg-[#9E5F27] text-white text-[11px] font-semibold tracking-wider uppercase rounded-xs transition-colors shrink-0"
+                >
+                  <span>Open in Maps</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+
+              {/* Interactive / Clickable Map Container */}
+              <div className="relative w-full h-56 sm:h-64 bg-[#1A1412]">
+                <iframe
+                  title="Entrabalance Primary Office Location Map - Orlando, FL"
+                  src="https://maps.google.com/maps?q=28.5635481,-81.3891114&z=15&output=embed"
+                  className="w-full h-full border-0 filter contrast-[0.95] opacity-90 hover:opacity-100 transition-opacity"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=1317+Edgewater+Dr+Suite+%23000+Orlando+FL+32804"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-3 left-3 bg-[#1A1412]/90 backdrop-blur-xs text-white text-xs px-3 py-1.5 border border-[#382B27] hover:border-[#B87333] hover:text-[#B87333] transition-all flex items-center gap-1.5 rounded-xs"
+                >
+                  <MapPin className="w-3.5 h-3.5 text-[#B87333]" />
+                  <span>View on Google Maps</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+
+            {/* Location 2 — Secondary India Operations Office */}
+            <div className="bg-[#221A17] border border-[#382B27] rounded-sm overflow-hidden flex flex-col group hover:border-[#B87333]/60 transition-all">
+              <div className="p-4 bg-[#281F1B] border-b border-[#382B27] flex items-start justify-between gap-3">
+                <div className="flex items-start gap-2.5">
+                  <MapPin className="w-4 h-4 text-[#B87333] shrink-0 mt-0.5" />
+                  <div>
+                    <span className="text-[10px] uppercase font-mono tracking-wider text-[#B87333] block">
+                      Secondary Office &bull; India Operations
                     </span>
                     <span className="text-xs sm:text-sm font-medium text-white leading-snug">
                       Supreme Arcade, Office no:04, 1st floor, Rakshak Nagar, Kharadi, Pune – 411014
@@ -222,7 +269,7 @@ export const Footer: React.FC = () => {
                   </div>
                 </div>
                 <a
-                  href="https://maps.app.goo.gl/PZtu7woR8PTP8BbcA?g_st=iw"
+                  href="https://www.google.com/maps/search/?api=1&query=Supreme+Arcade,+Rakshak+Nagar,+Kharadi,+Pune+411014"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#B87333] hover:bg-[#9E5F27] text-white text-[11px] font-semibold tracking-wider uppercase rounded-xs transition-colors shrink-0"
@@ -242,7 +289,7 @@ export const Footer: React.FC = () => {
                   referrerPolicy="no-referrer-when-downgrade"
                 />
                 <a
-                  href="https://maps.app.goo.gl/PZtu7woR8PTP8BbcA?g_st=iw"
+                  href="https://www.google.com/maps/search/?api=1&query=Supreme+Arcade,+Rakshak+Nagar,+Kharadi,+Pune+411014"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="absolute bottom-3 left-3 bg-[#1A1412]/90 backdrop-blur-xs text-white text-xs px-3 py-1.5 border border-[#382B27] hover:border-[#B87333] hover:text-[#B87333] transition-all flex items-center gap-1.5 rounded-xs"
@@ -251,25 +298,6 @@ export const Footer: React.FC = () => {
                   <span>View on Google Maps</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
-              </div>
-            </div>
-
-            {/* Location 2 — Blank Placeholder Reserved for Second Location */}
-            <div className="bg-[#221A17]/60 border border-dashed border-[#382B27] hover:border-[#B87333]/40 rounded-sm overflow-hidden flex flex-col justify-center items-center p-8 text-center transition-all min-h-[280px]">
-              <div className="w-12 h-12 rounded-full bg-[#281F1B] border border-[#382B27] flex items-center justify-center mb-3">
-                <MapPin className="w-5 h-5 text-[#B87333]/50" />
-              </div>
-              <span className="text-[10px] uppercase font-mono tracking-widest text-[#B87333]/80 font-semibold mb-1">
-                Secondary Jurisdiction / Office
-              </span>
-              <h5 className="text-sm font-medium text-[#FAF7F2]/80 mb-2">
-                Location To Be Announced
-              </h5>
-              <p className="text-xs text-[#9E9086] max-w-xs leading-relaxed">
-                Space reserved for international operations office. Location details and interactive map will be configured here soon.
-              </p>
-              <div className="mt-4 px-3.5 py-1.5 border border-[#382B27] rounded-xs bg-[#1A1412]/50 text-[11px] font-mono text-[#7A6F6B]">
-                Coordinates &bull; Pending Configuration
               </div>
             </div>
           </div>

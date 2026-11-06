@@ -20,6 +20,16 @@ export const companyInformation = {
   satisfactionRate: "100%",
   entityType: "Limited Liability Partnership (LLP)",
   contactEmail: "contact@entrabalance.com",
+  primaryOffice: {
+    title: "Primary Office • United States",
+    address: "1317 Edgewater Dr. Suite #000 Orlando, FL 32804",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=1317+Edgewater+Dr+Suite+%23000+Orlando+FL+32804",
+  },
+  secondaryOffice: {
+    title: "Secondary Office • India Operations",
+    address: "Supreme Arcade, Office no:04, 1st floor, Rakshak Nagar, Kharadi, Pune – 411014",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Supreme+Arcade,+Rakshak+Nagar,+Kharadi,+Pune+411014",
+  },
   whatsappNumber: "+91 89996 00315",
   whatsappRaw: "918999600315",
   whatsappUrl: "https://wa.me/918999600315?text=Hello%20Yogeshwar,%20I%20would%20like%20to%20enquire%20about%20your%20accounting%20and%20financial%20operations%20services.",

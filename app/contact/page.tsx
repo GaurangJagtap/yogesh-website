@@ -116,6 +116,30 @@ export default function ContactPage() {
                         {companyInformation.contactEmail}
                       </a>
                     </div>
+                    <div className="pt-2 border-t border-[#EBEBE8] space-y-1.5">
+                      <div>
+                        <strong className="text-[#111111]">Primary Office (USA):</strong>{" "}
+                        <a
+                          href="https://www.google.com/maps/search/?api=1&query=1317+Edgewater+Dr+Suite+%23000+Orlando+FL+32804"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-[#B87333] transition-colors"
+                        >
+                          1317 Edgewater Dr. Suite #000 Orlando, FL 32804
+                        </a>
+                      </div>
+                      <div>
+                        <strong className="text-[#111111]">Secondary Office (India):</strong>{" "}
+                        <a
+                          href="https://www.google.com/maps/search/?api=1&query=Supreme+Arcade,+Rakshak+Nagar,+Kharadi,+Pune+411014"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-[#B87333] transition-colors"
+                        >
+                          Supreme Arcade, Office no:04, 1st floor, Rakshak Nagar, Kharadi, Pune – 411014
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
