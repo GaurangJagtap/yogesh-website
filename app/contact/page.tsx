@@ -118,7 +118,7 @@ export default function ContactPage() {
                     </div>
                     <div className="pt-2 border-t border-[#EBEBE8] space-y-1.5">
                       <div>
-                        <strong className="text-[#111111]">Primary Office (USA):</strong>{" "}
+                        <strong className="text-[#111111]">United States Office:</strong>{" "}
                         <a
                           href="https://www.google.com/maps/search/?api=1&query=1317+Edgewater+Dr+Suite+%23000+Orlando+FL+32804"
                           target="_blank"
@@ -129,14 +129,14 @@ export default function ContactPage() {
                         </a>
                       </div>
                       <div>
-                        <strong className="text-[#111111]">Secondary Office (India):</strong>{" "}
+                        <strong className="text-[#111111]">India Operations Office:</strong>{" "}
                         <a
-                          href="https://www.google.com/maps/search/?api=1&query=Supreme+Arcade,+Rakshak+Nagar,+Kharadi,+Pune+411014"
+                          href="https://www.google.com/maps/search/?api=1&query=Office+02,+Ground+floor,+Venkatesh+Krupa,+BRAMHA+SUN+CITY,+off+Brahma+Sun+City+Road,+Kharadkar+Nagar,+Sainikwadi,+Wadgaon+Sheri,+Pune,+Maharashtra+411014"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="hover:text-[#B87333] transition-colors"
                         >
-                          Supreme Arcade, Office no:04, 1st floor, Rakshak Nagar, Kharadi, Pune – 411014
+                          Office 02, Ground floor, Venkatesh Krupa, BRAMHA SUN CITY, off Brahma Sun City Road, Kharadkar Nagar, Sainikwadi, Wadgaon Sheri, Pune, Maharashtra 411014
                         </a>
                       </div>
                     </div>
